@@ -1,6 +1,7 @@
 <?php
 #leer usuario y password de la base de datos, mostrar id si se puede
 #Darle la condicion si existe o no 
+ob_start();
 
 if (!empty($_POST["btnIngresar"])) {
     if (!empty($_POST["usuario"]) and empty($_POST["password"])) {
@@ -15,12 +16,12 @@ if (!empty($_POST["btnIngresar"])) {
 
         // Verificar si la consulta fue exitosa
         if ($result && $datos = $result->fetch_object()) {
-            header("location:inndex.php?id=" . $datos->idusuario);
+            header("location:index.php?id=" . $datos->idusuario);
             
         } else {
             echo "Usuario o contraseña incorrecta";
         }
     }    
 }
-
+ob_end_flush();
 ?>
