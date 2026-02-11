@@ -37,10 +37,8 @@
     margin-left: 0;
     padding: 0;
     display: block;
-
-    width: 148px;
-    height: 110px;
-    /* Asegura que el video se muestra como bloque */
+    width: min(40vw, 220px);
+    height: auto;
 }
 
 .dropdown-content span,
@@ -57,6 +55,15 @@
 .dropdown:hover .dropdown-content2 {
     display: block;
 }
+
+@media screen and (max-width: 767px) {
+    .dropdown-content, .dropdown-content2 { left: 0; transform: none; }
+    .dropdown-content video, .dropdown-content2 video { width: min(60vw, 200px); }
+}
+
+/* Dropdown visuals to match theme */
+.dropdown-content, .dropdown-content2 { border-radius: 8px; padding: 8px; box-shadow: 0 10px 30px rgba(0,0,0,0.12); }
+.dropdown-content video, .dropdown-content2 video { border-radius:6px; }
 
 .opciones-idioma {
     display: none;

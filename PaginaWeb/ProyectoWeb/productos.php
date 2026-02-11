@@ -4,6 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="EstiloP\estilo.css">
     <link rel="stylesheet" type="text/css" href="EstiloP/estilosO.css">
     <link rel="icon" href="imagenes/log.png" type="image/x-icon">
@@ -16,6 +17,9 @@
         <div class="logo">
             <a href="inndex.php">CAP Brewery</a>
         </div>
+        <button class="nav-toggle" aria-label="Abrir menú" aria-expanded="false">
+            <span class="hamburger"></span>
+        </button>
         <nav class="enlaces">
             <div id="idiomaLink" class="dropdownboton">
                 <a href="inndex.php"><img src="imagenes/iconos/accesibilidad.png" alt="" width="24px"></a>
@@ -741,6 +745,7 @@
 
 </body>
 
+<script src="javascript/mobileNav.js"></script>
 <script src="javascript/modalPro.js"></script>
 <script src="javascript/carritoPro.js"></script>
 <script src="javascript/lenguajeS.js"></script>
