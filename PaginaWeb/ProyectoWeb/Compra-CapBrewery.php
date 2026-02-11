@@ -757,261 +757,41 @@
         </div>
 
         <div class="product-grid">
+          <?php
+          if ($result && $result->num_rows > 0) {
+            while($datos = $result->fetch_object()) {
+          ?>
           <article class="product-card">
             <div class="card-image-wrapper">
-              <span class="badge new">AREQUIPA</span>
-              <img src="imagenes/melkim.jpg" alt="Cerveza Melkim" />
+              <span class="badge new">NUEVO</span>
+              <img src="<?=$datos->imagen_url?>" alt="<?=$datos->nombreP ?? $datos->nombre?>" />
               <div class="card-actions">
                 <button class="action-btn" title="Información">
-                  <span class="material-icons" style="font-size: 1.2rem"
-                    >info</span
-                  >
+                  <span class="material-icons" style="font-size: 1.2rem">info</span>
                 </button>
                 <button class="action-btn" title="Añadir">
-                  <span class="material-icons" style="font-size: 1.2rem"
-                    >add_shopping_cart</span
-                  >
+                  <span class="material-icons" style="font-size: 1.2rem">add_shopping_cart</span>
                 </button>
               </div>
             </div>
             <div class="card-content">
-              <p class="brand">Melkim</p>
-              <h3 class="title">Melkim Kolsch</h3>
-              <p class="subtitle">Rubia / 4.8% ABV</p>
+              <p class="brand">CAP Brewery</p>
+              <h3 class="title"><?=$datos->nombre?></h3>
+              <p class="subtitle">Cerveza Artesanal</p>
               <div class="price-row">
-                <span class="price"
-                  >S/. 12.00 <span class="unit">/ botella</span></span
-                >
+                <span class="price">S/. <?=$datos->precio?> <span class="unit">/ botella</span></span>
                 <div class="stars">
-                  <span class="material-icons">star</span
-                  ><span class="material-icons">star</span
-                  ><span class="material-icons">star</span
-                  ><span class="material-icons">star</span
-                  ><span class="material-icons">star_border</span>
+                  <span class="material-icons">star</span><span class="material-icons">star</span><span class="material-icons">star</span><span class="material-icons">star</span><span class="material-icons">star_border</span>
                 </div>
               </div>
             </div>
           </article>
-
-          <article class="product-card">
-            <div class="card-image-wrapper">
-              <img src="imagenes/maddock.jpg" alt="Cerveza Maddock" />
-              <div class="card-actions">
-                <button class="action-btn">
-                  <span class="material-icons">info</span>
-                </button>
-                <button class="action-btn">
-                  <span class="material-icons">add_shopping_cart</span>
-                </button>
-              </div>
-            </div>
-            <div class="card-content">
-              <p class="brand">Maddock</p>
-              <h3 class="title">Pale Ale Clásica</h3>
-              <p class="subtitle">Rubia / 5.5% ABV</p>
-              <div class="price-row">
-                <span class="price"
-                  >S/. 14.50 <span class="unit">/ botella</span></span
-                >
-                <div class="stars">
-                  <span class="material-icons">star</span
-                  ><span class="material-icons">star</span
-                  ><span class="material-icons">star</span
-                  ><span class="material-icons">star_half</span
-                  ><span class="material-icons">star_border</span>
-                </div>
-              </div>
-            </div>
-          </article>
-
-          <article class="product-card">
-            <div class="card-image-wrapper">
-              <span class="badge sale">BEST SELLER</span>
-              <img src="imagenes/barbarin.jpg" alt="Cerveza Barbarian" />
-              <div class="card-actions">
-                <button class="action-btn">
-                  <span class="material-icons">info</span>
-                </button>
-                <button class="action-btn">
-                  <span class="material-icons">add_shopping_cart</span>
-                </button>
-              </div>
-            </div>
-            <div class="card-content">
-              <p class="brand">Barbarian</p>
-              <h3 class="title">Red Ale</h3>
-              <p class="subtitle">Roja / 7.0% ABV</p>
-              <div class="price-row">
-                <span class="price"
-                  >S/. 13.00 <span class="unit">/ botella</span></span
-                >
-                <div class="stars">
-                  <span class="material-icons">star</span
-                  ><span class="material-icons">star</span
-                  ><span class="material-icons">star</span
-                  ><span class="material-icons">star</span
-                  ><span class="material-icons">star</span>
-                </div>
-              </div>
-            </div>
-          </article>
-
-          <article class="product-card">
-            <div class="card-image-wrapper">
-              <img src="imagenes/magdalena.jpeg" alt="Cerveza Magdalena" />
-              <div class="card-actions">
-                <button class="action-btn">
-                  <span class="material-icons">info</span>
-                </button>
-                <button class="action-btn">
-                  <span class="material-icons">add_shopping_cart</span>
-                </button>
-              </div>
-            </div>
-            <div class="card-content">
-              <p class="brand">Magdalena</p>
-              <h3 class="title">English Porter</h3>
-              <p class="subtitle">Negra / 5.8% ABV</p>
-              <div class="price-row">
-                <span class="price"
-                  >S/. 15.00 <span class="unit">/ botella</span></span
-                >
-                <div class="stars">
-                  <span class="material-icons">star</span
-                  ><span class="material-icons">star</span
-                  ><span class="material-icons">star</span
-                  ><span class="material-icons">star</span
-                  ><span class="material-icons">star</span>
-                </div>
-              </div>
-            </div>
-          </article>
-
-          <article class="product-card">
-            <div class="card-image-wrapper">
-              <img src="imagenes/Nmundo.jpg" alt="Cerveza Nuevo Mundo" />
-              <div class="card-actions">
-                <button class="action-btn">
-                  <span class="material-icons">info</span>
-                </button>
-                <button class="action-btn">
-                  <span class="material-icons">add_shopping_cart</span>
-                </button>
-              </div>
-            </div>
-            <div class="card-content">
-              <p class="brand">Nuevo Mundo</p>
-              <h3 class="title">Panam IPA</h3>
-              <p class="subtitle">Rubia / 6.6% ABV</p>
-              <div class="price-row">
-                <span class="price"
-                  >S/. 16.00 <span class="unit">/ botella</span></span
-                >
-                <div class="stars">
-                  <span class="material-icons">star</span
-                  ><span class="material-icons">star</span
-                  ><span class="material-icons">star</span
-                  ><span class="material-icons">star</span
-                  ><span class="material-icons">star_half</span>
-                </div>
-              </div>
-            </div>
-          </article>
-
-          <article class="product-card">
-            <div class="card-image-wrapper">
-              <img src="imagenes/cumbres.jpg" alt="Cerveza Cumbres" />
-              <div class="card-actions">
-                <button class="action-btn">
-                  <span class="material-icons">info</span>
-                </button>
-                <button class="action-btn">
-                  <span class="material-icons">add_shopping_cart</span>
-                </button>
-              </div>
-            </div>
-            <div class="card-content">
-              <p class="brand">Cumbres</p>
-              <h3 class="title">Imperial Stout</h3>
-              <p class="subtitle">Negra / 8.0% ABV</p>
-              <div class="price-row">
-                <span class="price"
-                  >S/. 14.00 <span class="unit">/ botella</span></span
-                >
-                <div class="stars">
-                  <span class="material-icons">star</span
-                  ><span class="material-icons">star</span
-                  ><span class="material-icons">star</span
-                  ><span class="material-icons">star</span
-                  ><span class="material-icons">star</span>
-                </div>
-              </div>
-            </div>
-          </article>
-
-          <article class="product-card">
-            <div class="card-image-wrapper">
-              <span class="badge sale">OFERTA</span>
-              <img src="imagenes/badbitch.jpg" alt="Cerveza Bad Bitch" />
-              <div class="card-actions">
-                <button class="action-btn">
-                  <span class="material-icons">info</span>
-                </button>
-                <button class="action-btn">
-                  <span class="material-icons">add_shopping_cart</span>
-                </button>
-              </div>
-            </div>
-            <div class="card-content">
-              <p class="brand">Bad Bitch</p>
-              <h3 class="title">Red Ale Especial</h3>
-              <p class="subtitle">Roja / 5.0% ABV</p>
-              <div class="price-row">
-                <span class="price" style="color: #ef4444"
-                  >S/. 11.50 <span class="unit">/ botella</span></span
-                >
-                <div class="stars">
-                  <span class="material-icons">star</span
-                  ><span class="material-icons">star</span
-                  ><span class="material-icons">star</span
-                  ><span class="material-icons">star_border</span
-                  ><span class="material-icons">star_border</span>
-                </div>
-              </div>
-            </div>
-          </article>
-
-          <article class="product-card">
-            <div class="card-image-wrapper">
-              <span class="badge new">FUERTE</span>
-              <img src="imagenes/7vidas.jpg" alt="Cerveza 7 Vidas" />
-              <div class="card-actions">
-                <button class="action-btn">
-                  <span class="material-icons">info</span>
-                </button>
-                <button class="action-btn">
-                  <span class="material-icons">add_shopping_cart</span>
-                </button>
-              </div>
-            </div>
-            <div class="card-content">
-              <p class="brand">7 Vidas</p>
-              <h3 class="title">Barley Wine</h3>
-              <p class="subtitle">Turbia / 13.3% ABV</p>
-              <div class="price-row">
-                <span class="price"
-                  >S/. 22.00 <span class="unit">/ botella</span></span
-                >
-                <div class="stars">
-                  <span class="material-icons">star</span
-                  ><span class="material-icons">star</span
-                  ><span class="material-icons">star</span
-                  ><span class="material-icons">star</span
-                  ><span class="material-icons">star</span>
-                </div>
-              </div>
-            </div>
-          </article>
+          <?php 
+            }
+          } else {
+             echo "<p style='text-align:center; width:100%; grid-column: 1 / -1;'>No se encontraron productos disponibles.</p>";
+          }
+          ?>
         </div>
 
         <div
@@ -1065,6 +845,28 @@
         </div>
       </section>
     </main>
+
+    <!-- Carrito de Compras -->
+    <form method="POST" action="productos_Almacenado.php" id="contCarro" class="carrito">
+      <div class="carrito-contenido">
+        <span class="cerrar-carro">&times;</span>
+        <h2>Tu Carrito <span class="material-icons" style="vertical-align: middle;">shopping_cart</span></h2>
+
+        <div class="carrito-items">
+          <!-- Items injected by JS -->
+        </div>
+
+        <div class="carrito-total">
+          <div class="fila">
+            <strong>Total</strong>
+            <span class="carrito-precio-total">S/. 0.00</span>
+          </div>
+          <button class="btn-pagar">
+            Pagar <span class="material-icons" style="margin-left: 10px;">shopping_bag</span>
+          </button>
+        </div>
+      </div>
+    </form>
 
     <footer>
       <div class="container">
